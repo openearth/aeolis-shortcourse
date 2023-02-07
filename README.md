@@ -7,8 +7,9 @@ bed surface properties such as sediment sorting and armoring, soil moisture cont
 suited for coastal environments where these conditions are oftern present. The use of AeoLiS in coastal environments allows for the
 modeling of berm feature changes due to the forcing factors of aeolian sediment transport and waves (in combination with tide).
 
-**Model source code can be found at:** https://github.com/openearth/aeolis-python
-**Model description and documentation can be found at:** https://aeolis.readthedocs.io/en/latest/
+  **- Model source code can be found at:** https://github.com/openearth/aeolis-python
+
+  **- Model description and documentation can be found at:** https://aeolis.readthedocs.io/en/latest/
 
 
 
