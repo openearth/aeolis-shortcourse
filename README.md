@@ -19,17 +19,17 @@ It is recommended to have Anaconda installed prior to starting the short course 
 ```sh
 conda create -n aeolis_env python=3.8
 ```
-    - when prompted to proceed type: y
+   - when prompted to proceed type: y
 3. Activate the newly created conda environment with the following command
 ```sh
 conda activate aeolis_env
 ```
-    - when this step is complete you should see (aeolis_env) on the far left of your terminal command line before your current path
+   - when this step is complete you should see (aeolis_env) on the far left of your terminal command line before your current path
 4. Install git to the activated conda environment with the following command
 ```sh
 conda install git
 ```
-    - when prompted to proceed type: y
+   - when prompted to proceed type: y
 5. Download and install AeoLiS from the OpenEarth AeoLiS GitHub
 ```sh
 pip install git+https://github.com/openearth/aeolis-python
