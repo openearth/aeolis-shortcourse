@@ -34,7 +34,7 @@ transport. Each of the 2D and 1D scenarios included in the short course are outl
 
 ## Getting Started
 
-#### Prerequisits
+#### Prerequisite
 
 Before starting the short course, please make sure you have Python installed on your computer and access to a terminal window (terminal or Anaconda Prompt). 
 It is recommended to have Anaconda installed prior to starting the short course as this program includes all of the necessary programs to install AeoLiS and complete the short course. 
