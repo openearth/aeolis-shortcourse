@@ -30,7 +30,7 @@ transport. Each of the 2D and 1D scenarios included in the short course are outl
    3. Inclusion of Sand Fences
    4. Inclusion of Vegetation
 
-Prior to starting the short course follow the steps below in Getting Started to download and install AeoLiS to your computer.
+Prior to starting the short course follow the steps below in **Getting Started** to download and install AeoLiS to your computer.
 
 ## Getting Started
 
