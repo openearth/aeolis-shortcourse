@@ -7,9 +7,9 @@ soil moisture content, and bed-slope effects make AeoLiS well suited for coastal
 The use of AeoLiS in coastal environments allows for the modeling of berm feature changes due to the forcing factors of aeolian sediment 
 transport and waves (in combination with tide). 
 
-   **- Model source code can be found at:** https://github.com/openearth/aeolis-python
+   * **Model source code can be found at:** https://github.com/openearth/aeolis-python
 
-   **- Additional model description and documentation can be found at:** https://aeolis.readthedocs.io/
+   * **Additional model description and documentation can be found at:** https://aeolis.readthedocs.io/
 
 ## AeoLiS Short Course Organization
 
