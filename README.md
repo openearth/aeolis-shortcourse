@@ -1,4 +1,4 @@
-![AeoLiS Banner](https://github.com/openearth/aeolis-shortcourse/tree/main/Sandmotot/notebooks/logo.png)
+![AeoLiS Banner](https://github.com/openearth/aeolis-shortcourse/blob/main/Sandmotor/notebooks/logo.png)
 
 # AeoLiS Short Course
 
