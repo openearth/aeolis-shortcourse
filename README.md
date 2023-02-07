@@ -7,4 +7,4 @@ Before starting the short course, please make sure you have
 
 ## Getting Started
 
-**Installing AeoLiS**
+#### Installing AeoLiS
