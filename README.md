@@ -18,19 +18,19 @@ where within each folder are additional folders containing all required model in
 different scenarios included in this short course introduce the includsion of different physical processes effecting aeolian sediment
 transport. Each of the 2D and 1D scenarios included in the short course are outlined below.
 
-   **- Sandmotor (2D)**
+#### Sandmotor (2D)
       
-     1. Base case - no supply limitations
-     2. Grain Size Case - introduction of supply limitations through a coarse fraction
-     3. Grain Size Case with Inclusion of Tides - inclusion of supply limitations and sediment mixing from tides
-     4. Grain Size Case with Inclusion of Tides & Waves - iclusion of supply limitations and sediment mixing from both tides & waves
+  1. Base case - no supply limitations
+  2. Grain Size Case - introduction of supply limitations through a coarse fraction
+  3. Grain Size Case with Inclusion of Tides - inclusion of supply limitations and sediment mixing from tides
+  4. Grain Size Case with Inclusion of Tides & Waves - iclusion of supply limitations and sediment mixing from both tides & waves
   
-   **- Insert Folder Name Here (1D)**
+#### Insert Folder Name Here (1D)
       
-     1. Base Case 
-     2. Inclusion of Surface Moisture
-     3. Inclusion of Sand Fences
-     4. Inclusion of Vegetation
+  1. Base Case 
+  2. Inclusion of Surface Moisture
+  3. Inclusion of Sand Fences
+  4. Inclusion of Vegetation
 
 ## Getting Started
 
