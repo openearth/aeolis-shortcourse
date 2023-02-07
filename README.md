@@ -20,10 +20,10 @@ transport. Each of the 2D and 1D scenarios included in the short course are outl
 
 #### Sandmotor (2D)
       
-    1. Base Case 
-    2. Grain Size Case 
-    3. Grain Size Case with Inclusion of Tides 
-    4. Grain Size Case with Inclusion of Tides & Waves 
+   1. Base Case 
+   2. Grain Size Case 
+   3. Grain Size Case with Inclusion of Tides 
+   4. Grain Size Case with Inclusion of Tides & Waves 
   
 #### Insert Folder Name Here (1D)
       
