@@ -5,7 +5,7 @@ and 2D AeoLiS cases to introduce you to the model.AeoLiS is a process-based aeol
 in sediment supply using multiple bed surface properties. The inclusion of bed surface properties such as sediment sorting and armoring, 
 soil moisture content, and bed-slope effects make AeoLiS well suited for coastal environments where these conditions are oftern present. 
 The use of AeoLiS in coastal environments allows for the modeling of berm feature changes due to the forcing factors of aeolian sediment 
-transport and waves (in combination with tide).
+transport and waves (in combination with tide). 
 
    **- Model source code can be found at:** https://github.com/openearth/aeolis-python
 
@@ -32,9 +32,11 @@ transport. Each of the 2D and 1D scenarios included in the short course are outl
    3. Inclusion of Sand Fences
    4. Inclusion of Vegetation
 
+Prior to starting the short course follow the steps below in Getting Started to download and install AeoLiS to your computer.
+
 ## Getting Started
 
-#### Prerequisite
+#### Prerequisites
 
 Before starting the short course, please make sure you have Python installed on your computer and access to a terminal window (terminal or Anaconda Prompt). 
 It is recommended to have Anaconda installed prior to starting the short course as this program includes all of the necessary programs to install AeoLiS and complete the short course. 
