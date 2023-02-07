@@ -20,10 +20,10 @@ different scenarios included in this short course introduce the includsion of di
 transport. Each of the 2D and 1D scenarios included in the short course are outlined below
 
     **- Sandmotor (2D)**
-        1. Base case - one grain size, no supply limitations
-        2. Grain Size Case - introducing supply limitation through inclusion of a course fraction
-        3. Grain Size Case with Inclusion of Tides - inclusion of supply limitations and sediment mixing from tides
-        4. Grain Size Case with Inclusion of Tides & Waves - iclusion of supply limitations and sediment mixing from both tides & waves
+        1. Base case
+        2. Grain Size Case 
+        3. Grain Size Case with Inclusion of Tides
+        4. Grain Size Case with Inclusion of Tides & Waves
     **- Insert Folder Name Here (1D)**
         1. Base Case 
         2. Inclusion of Surface Moisture
