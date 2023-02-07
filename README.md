@@ -10,13 +10,25 @@ transport and waves (in combination with tide).
 
     **- Model source code can be found at:** https://github.com/openearth/aeolis-python
 
-    **- Model description and documentation can be found at:** https://aeolis.readthedocs.io/en/latest/
+    **- Additional model description and documentation can be found at:** https://aeolis.readthedocs.io/
 
-## AeoLiS Short Course
+## AeoLiS Short Course Organization
 
-The short course is organized such that there are two main folders, Sandmotor (2D cases) and **insert second folder name** (1D cases), and within each folder are additional folders containing environmental data, model inputs, and documentation for the different
-scenarios included in the course where each scenario introduces the inclusion of different physical processes effecting aeolian sediment transport.
+The short course is organized such that there are two main folders, Sandmotor (2D cases) and **inset second folder name** (1D cases),
+where within each folder are additional folders containing all required model input data and documentation for each case. Each of the 
+different scenarios included in this short course introduce the includsion of different physical processes effecting aeolian sediment
+transport. Each of the 2D and 1D scenarios included in the short course are outlined below:
 
+    **- Sandmotor (2D)**
+        1. Base case - one grain size, no supply limitations
+        2. Grain Size Case - introducing supply limitation through inclusion of a course fraction
+        3. Grain Size Case with Inclusion of Tides - inclusion of supply limitations and sediment mixing from tides
+        4. Grain Size Case with Inclusion of Tides & Waves - iclusion of supply limitations and sediment mixing from both tides & waves
+    **- Insert Folder Name Here (1D)**
+        1. Base Case 
+        2. Inclusion of Surface Moisture
+        3. Inclusion of Sand Fences
+        4. Inclusion of Vegetation
 
 ## Getting Started
 
