@@ -42,8 +42,8 @@ It is recommended to have Anaconda installed prior to starting the short course 
 #### Installing AeoLiS
 
 1. Open either a terminal window or Anaconda Prompt window
-   - If you are using a Linux or Apple computer, open a new terminal window
-   - If you are using a Windows computer, open Anaconda Prompt 
+   * If you are using a Linux or Apple computer, open a new terminal window
+   * If you are using a Windows computer, open Anaconda Prompt 
 2. Create a new conda environment by typing the following into your terminal window
    ```sh
    conda create -n aeolis_env python=3.8
