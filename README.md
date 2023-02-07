@@ -1,10 +1,12 @@
+![AeoLiS Banner](https://github.com/openearth/aeolis-shortcourse/tree/main/Sandmotot/notebooks/logo.png)
 
 # AeoLiS Short Course
 
 Hello, and welcome to the AeoLiS Short Course developed for Coastal Sediments '23. This short course will walk you through various 1D and 2D AeoLiS cases to introduce you to the model. 
 The short course is organized such that there are two main folders, Sandmotor (2D cases) and **insert second folder name** (1D cases), and within each folder are additional folders containing environmental data, model inputs, and documentation for the different
 scenarios included in the course where each scenario introduces the inclusion of different physical processes effecting aeolian sediment transport.
- 
+
+
 
 ## Getting Started
 
