@@ -67,3 +67,4 @@ It is recommended to have Anaconda installed prior to starting the short course 
    ```sh
    pip install notebook
    ```
+=======
