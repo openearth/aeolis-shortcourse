@@ -20,8 +20,7 @@ threshold_file           = None                                  % Filename of A
 fence_file               = None                                  % Filename of ASCII file with sand fence location/height (above the bed)
 wave_mask                = None                                  % Filename of ASCII file with mask for wave height
 tide_mask                = None                                  % Filename of ASCII file with mask for tidal elevation
-threshold_mask           = ../data/bathy/threshold.txt % Filename of ASCII file with mask for the shear velocity threshold
-mask_file                = ../data/bathy/mask_20110803.txt % Filename of ASCII file with mask for the shear velocity threshold
+threshold_mask           = ../data/bathy/threshold.txt % Filename of ASCII file with mask for the shear velocity thresholdmask_file                = ../data/bathy/mask_20110803.txt % Filename of ASCII file with mask for the shear velocity threshold
 
 %% -------------------- [Time series *.txt] ------------------ %%
 tide_file                = ../data/bc/tide_none.txt           % Filename of ASCII file with time series of water levels
@@ -96,7 +95,7 @@ m                        = 1.                                    % [-] Factor to
 %% -------------------- [Transport] -------------------------- %%
 bi                       = 0.05000                               % [-] Bed interaction factor
 method_transport         = bagnold                               % [-] Name of method to compute equilibrium sediment transport rate
-method_grainspeed        = duran                                 % [-] Name of method to assume/compute grainspeed
+method_grainspeed        = windspeed                             % [-] Name of method to assume/compute grainspeed
 Aa                       = 0.085                                 % [-] Constant in formulation for wind velocity threshold based on grain size
 Cb                       = 1.5                                   % [-] Constant in bagnold formulation for equilibrium sediment concentration
 Ck                       = 2.78                                  % [-] Constant in kawamura formulation for equilibrium sediment concentration
