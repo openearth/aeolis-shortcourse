@@ -31,7 +31,7 @@ meteo_file              = ../data/bc/meteo.txt            % (None) Filename of A
 
 %% -------------------- [Output] ----------------------------- %%    
 output_times            = 3600                            % (60)[s] Timeinterval [s] between *.nc output file
-output_file             = aeolis.nc                       % (None)[-] Name of the *.nc output file
+output_file             = None                            % (None)[-] Name of the *.nc output file
 output_vars             = zb moist gw ustar ustarn ustars uth zsep Cu Ct vegfac zne uws uw q qs dzbavg udir              % ('zb', 'zs','Ct', 'Cu','uw', 'udir','uth', 'mass','pickup', 'w') [-] List of output variables for in *.nc output file
 visualization           = T                               % (F) [T/F] Enable the generation of figures visualizing model initialization
 
