@@ -8,9 +8,89 @@ from matplotlib.animation import FuncAnimation
 
 
 # import colormap
-colors = np.loadtxt('cmap_sandmotor.txt')
-cmap_sandmotor = matplotlib.colors.ListedColormap(colors)
+colors = np.loadtxt('cmap_DIFD.txt')
+cmap_DIFD = matplotlib.colors.ListedColormap(colors)
 
+
+def plot_topo(ncfile, change=False, figsize=(10,5),time_index_start=0, time_index_end=-1, ax=None):
+    '''Plot bathymetries or the erosion/deposition from an AeoLiS result file
+    
+    Parameters
+    ----------
+    ncfile : str
+      Path to AeoLiS result file
+    change : bool
+      Plot bathymetric change rather than actual bathymetry
+    figsize : 2-tuple, optional
+      Dimensions of resulting figure
+    time_index : int, optional
+      Index of time dimension to plot [default: -1]
+    ax : matplotlib.axes.SubplotAxis, optional
+      Axis used for plotting, if not given a new figure is created
+      
+    Returns
+    -------
+    ax : matplotlib.axes.SubplotAxis
+      plot axes objects
+      
+    '''
+    
+    with netCDF4.Dataset(ncfile, 'r') as ds:
+        
+        # get spatial dimensions and bed levels
+        x = ds.variables['x'][:,:]
+        y = ds.variables['y'][:,:]
+        zb = ds.variables['zb'][...]
+
+        
+        # create figure
+        if ax is None:
+            fig, ax = plt.subplots(figsize=figsize)
+        
+        # plot bed levels and bed level change
+        if not change:
+            p1 = ax.plt(x, zb[time_index_start,:,:], 'k-')
+            p2 = ax.plot(x, zb[time_index_end,:,:], 'r-')
+            plt.title("Initial and final profiles")
+            plt.xlabel("Cross-Shore distance (m)")
+            plt.ylabel("Elevation rel MSL (m)")
+
+        # else:
+        #     pickup = pickup.sum(axis=-1)             # sum over fractions
+        #     pickup = np.cumsum(pickup, axis=0)       # cummulative sum in time
+        #     dz = -pickup / (2650. * .6)               # convert from kg/m2 to m3/m2
+        #     p = ax.pcolormesh(y, x, dz[time_index,:,:], cmap='bwr_r', vmin=-2, vmax=2)
+        #     cb = fig.colorbar(p, shrink=.7)
+        #     cb.set_label('bed level change [m]')
+
+        # ax.contour(y, x, zb[0,:,:], [0.], colors=['k'])
+            
+        # ax.set_aspect('equal', adjustable='box')
+        # ax.invert_yaxis()
+            
+        # ax.set_xlabel('alongshore distance [m]')
+        # ax.set_ylabel('cross-shore distance [m]')
+
+    return ax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#%%
+#*******Bas scripts***** delete when done
 
 def plot_bathymetry(ncfile, change=False, figsize=(10,5), time_index=-1, ax=None):
     '''Plot bathymetries or the erosion/deposition from an AeoLiS result file
@@ -49,7 +129,7 @@ def plot_bathymetry(ncfile, change=False, figsize=(10,5), time_index=-1, ax=None
         
         # plot bed levels and bed level change
         if not change:
-            p = ax.pcolormesh(y, x, zb[time_index,:,:], cmap=cmap_sandmotor, vmin=-7.5, vmax=7.5)
+            p = ax.pcolormesh(y, x, zb[time_index,:,:], cmap=cmap_DIFD, vmin=-7.5, vmax=7.5)
             cb = fig.colorbar(p, shrink=.7)
             cb.set_label('bed level [m]')
         else:
@@ -244,7 +324,7 @@ def create_animation(ncfile, figsize=(10,4), ext='mp4', nframes=None):
         
     def update(i):
         ax.clear()
-        p = ax.pcolormesh(y, x, zb[i,:,:], cmap=cmap_sandmotor, vmin=-7.5, vmax=7.5)
+        p = ax.pcolormesh(y, x, zb[i,:,:], cmap=cmap_DIFD, vmin=-7.5, vmax=7.5)
         ax.set_aspect('equal', adjustable='box')
         ax.invert_yaxis()
         ax.set_xlabel('alongshore [m]')
