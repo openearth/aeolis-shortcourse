@@ -12,8 +12,9 @@ colors = np.loadtxt('cmap_DIFD.txt')
 cmap_DIFD = matplotlib.colors.ListedColormap(colors)
 
 
+
 def plot_topo(ncfile, change=False, figsize=(10,5),time_index_start=0, time_index_end=-1, ax=None):
-    '''Plot bathymetries or the erosion/deposition from an AeoLiS result file
+    '''Plot topography or the erosion/deposition from an AeoLiS result file
     
     Parameters
     ----------
@@ -38,54 +39,30 @@ def plot_topo(ncfile, change=False, figsize=(10,5),time_index_start=0, time_inde
     with netCDF4.Dataset(ncfile, 'r') as ds:
         
         # get spatial dimensions and bed levels
-        x = ds.variables['x'][:,:]
-        y = ds.variables['y'][:,:]
-        zb = ds.variables['zb'][...]
+        x = np.squeeze(ds.variables['x'][:,:])
+        zb = np.squeeze(ds.variables['zb'][...])
 
-        
         # create figure
         if ax is None:
             fig, ax = plt.subplots(figsize=figsize)
         
         # plot bed levels and bed level change
         if not change:
-            p1 = ax.plt(x, zb[time_index_start,:,:], 'k-')
-            p2 = ax.plot(x, zb[time_index_end,:,:], 'r-')
-            plt.title("Initial and final profiles")
-            plt.xlabel("Cross-Shore distance (m)")
-            plt.ylabel("Elevation rel MSL (m)")
+            p1 = ax.plot(x, zb[time_index_start,:], 'k-', label='Initial')
+            p2 = ax.plot(x, zb[time_index_end,:], 'r-', label = 'Final')
+            plt.title(['Initial and final profiles'])
+            ax.set_xlabel('Cross-shore distance [m]')
+            ax.set_ylabel('Elevation rel MSL (m)')
 
-        # else:
-        #     pickup = pickup.sum(axis=-1)             # sum over fractions
-        #     pickup = np.cumsum(pickup, axis=0)       # cummulative sum in time
-        #     dz = -pickup / (2650. * .6)               # convert from kg/m2 to m3/m2
-        #     p = ax.pcolormesh(y, x, dz[time_index,:,:], cmap='bwr_r', vmin=-2, vmax=2)
-        #     cb = fig.colorbar(p, shrink=.7)
-        #     cb.set_label('bed level change [m]')
 
-        # ax.contour(y, x, zb[0,:,:], [0.], colors=['k'])
-            
-        # ax.set_aspect('equal', adjustable='box')
-        # ax.invert_yaxis()
-            
-        # ax.set_xlabel('alongshore distance [m]')
-        # ax.set_ylabel('cross-shore distance [m]')
-
+        else:
+            p1 = ax.plot(x, zb[time_index_start,:]-zb[time_index_end,:], 'k-', label='Difference')
+            ax.title('Elevation difference initial - final profile')
+            ax.set_xlabel('Cross-shore distance [m]')
+            ax.set_ylabel('Elevation difference (m)')            
+        
+        
     return ax
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
