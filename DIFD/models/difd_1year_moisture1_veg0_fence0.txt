@@ -32,8 +32,8 @@ meteo_file              = ../data/bc/meteo.txt            % (None) Filename of A
 %% -------------------- [Output] ----------------------------- %%    
 output_times            = 3600                            % (60)[s] Timeinterval [s] between *.nc output file
 output_file             = None                            % (None)[-] Name of the *.nc output file
-output_vars             = zb moist gw ustar ustarn ustars uth zsep Cu Ct vegfac zne uws uw q qs dzbavg udir              % ('zb', 'zs','Ct', 'Cu','uw', 'udir','uth', 'mass','pickup', 'w') [-] List of output variables for in *.nc output file
-visualization           = T                               % (F) [T/F] Enable the generation of figures visualizing model initialization
+output_vars             = zb moist gw ustar ustarn ustars uth zsep Cu Ct zne uws uw q qs dzbavg udir pickup_sum             % ('zb', 'zs','Ct', 'Cu','uw', 'udir','uth', 'mass','pickup', 'w') [-] List of output variables for in *.nc output file
+visualization           = F                               % (F) [T/F] Enable the generation of figures visualizing model initialization
 
 %% -------------------- [Flags Processes] -------------------- %%
 process_wind            = T                               % (T) [T/F] Enable the process of wind 
@@ -46,7 +46,7 @@ process_wave            = T                               % (F) [T/F] Enable the
 process_runup           = T                               % (F) [T/F] Enable the process of wave runup
 process_moist           = T                               % (F) [T/F] Enable the process of moist
 process_mixtoplayer     = F                               % (F) [T/F] Enable the process of mixing
-process_wet_bed_reset   = F                               % (F) [T/F] Enable the process of bed-reset in the intertidal zone
+process_wet_bed_reset   = T                               % (F) [T/F] Enable the process of bed-reset in the intertidal zone
 process_meteo           = T                               % (F) [T/F] Enable the process of meteo
 process_avalanche       = T                               % (F) [T/F] Enable the process of avalanching
 process_separation      = F                               % (F) [T/F] Enable the including of separation bubble
@@ -55,7 +55,7 @@ process_fences          = F                               % (F) [T/F] Enable the
 process_dune_erosion    = F                               % (F) [T/F] Enable the process of wave-driven dune erosion
 process_groundwater     = T                               % (F) [T/F] Enable the process of groundwater
 process_seepage_face    = T                               % (F) [T/F] Enable the process of groundwater seepage
-process_scanning        = T                               % (F) [T/F] Enable the process of scanning curves
+process_scanning        = F                               % (F) [T/F] Enable the process of scanning curves
 
 %% -------------------- [Flags Threshold] -------------------- %%
 th_grainsize            = T                               % (T) [T/F] Enable wind velocity threshold based on grainsize
