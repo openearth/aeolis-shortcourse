@@ -232,7 +232,7 @@ def compare_topo(ncfile_fence, ncfile_veg,figsize=(10,5), time_step=-1,ax=None):
         
         # get spatial dimensions and bed levels
         x_fence = np.squeeze(ds.variables['x'][:,:])
-        zb_veg = np.squeeze(ds.variables['zb'][...])
+        zb_fence = np.squeeze(ds.variables['zb'][...])
         
     with netCDF4.Dataset(ncfile_veg, 'r') as ds:
         
