@@ -63,7 +63,7 @@ def plot_topo(ncfile, change=False, figsize=(10,5),time_index_start=0, time_inde
         
     return ax
 
-def plot_flux(ncfile, cum = True,figsize=(10,5), time_index_start=0, time_index_end=-1,grid_cell=442, ax=None):
+def plot_flux(ncfile, cum = True,figsize=(10,5), grid_cell=442, ax=None):
     '''Plot cumulated sediment flux from an AeoLiS result file
     
     Parameters
@@ -74,10 +74,6 @@ def plot_flux(ncfile, cum = True,figsize=(10,5), time_index_start=0, time_index_
       Plot cumulative flux
     figsize : 2-tuple, optional
       Dimensions of resulting figure
-    time_index_start : int
-      Index of first (initial) time dimension to plot [default: 0]
-    time_index_stop : int
-      Index of last (final) time dimension to plot [default: -1]
     grid_cell : int
       Index of gridcell to plot [default: 442; where the dike starts]
     ax : matplotlib.axes.SubplotAxis, optional
@@ -128,7 +124,7 @@ def plot_flux(ncfile, cum = True,figsize=(10,5), time_index_start=0, time_index_
         
     return ax
 
-def plot_flux_compare(ncfile_orig, ncfile_new, cum = True,figsize=(10,5), time_index_start=0, time_index_end=-1,grid_cell=442, ax=None):
+def plot_flux_compare(ncfile_orig, ncfile_new, cum = True,figsize=(10,5),grid_cell=442, ax=None):
     '''Plot cumulated sediment flux from an AeoLiS result file
     
     Parameters
@@ -141,10 +137,6 @@ def plot_flux_compare(ncfile_orig, ncfile_new, cum = True,figsize=(10,5), time_i
       Plot cumulative flux
     figsize : 2-tuple, optional
       Dimensions of resulting figure
-    time_index_start : int
-      Index of first (initial) time dimension to plot [default: 0]
-    time_index_stop : int
-      Index of last (final) time dimension to plot [default: -1]
     grid_cell : int
       Index of gridcell to plot [default: 442; where the dike starts]
     ax : matplotlib.axes.SubplotAxis, optional
