@@ -5,7 +5,7 @@
 
 %% -------------------- [Timing] ----------------------------- %%
 dt                      = 3600                            % (60) [s] Timeinterval between timesteps    
-tstart                  = 0                               % (0.)[s] Starting time of the simulation
+tstart                  = 2804400                         % (0.)[s] Starting time of the simulation
 tstop                   = 24397200                        % (3600)[s] End time of the simulation
 restart                 = None                            % (None) [s] Interval for which to write restart files
 refdate                 = 2023-25-06                      % ('2020-01-01 00:00')[-] Reference datetime in netCDF output
@@ -48,7 +48,7 @@ process_moist           = T                               % (F) [T/F] Enable the
 process_mixtoplayer     = F                               % (F) [T/F] Enable the process of mixing
 process_wet_bed_reset   = T                               % (F) [T/F] Enable the process of bed-reset in the intertidal zone
 process_meteo           = T                               % (F) [T/F] Enable the process of meteo
-process_avalanche       = T                               % (F) [T/F] Enable the process of avalanching
+process_avalanche       = F                               % (F) [T/F] Enable the process of avalanching
 process_separation      = F                               % (F) [T/F] Enable the including of separation bubble
 process_vegetation      = F                               % (F) [T/F] Enable the process of vegetation
 process_fences          = F                               % (F) [T/F] Enable the process of sand fencing
@@ -83,7 +83,7 @@ grain_size              = 0.00025                         % (0.000225) [m] Avera
 %% -------------------- [Wind and shear] --------------------- %%
 wind_convention         = nautical                        % (nautical ) [-] Convention used for the wind direction in the input files (cartesian or nautical)
 alfa                    = 60                              % (0)[deg] Real-world grid cell orientation wrt the North (clockwise)
-method_roughness        = constant_nikuradse              % (constant) [-] Name of method to compute roughness
+method_roughness        = vanrijn_strypsteen              % (constant) [-] Name of method to compute roughness
 k                       = 0.03                            % (0.001) [m] Bed roughness
 z                       = 10.                             % (10.) [m] Measurement height of wind velocity
 kappa                   = 0.41                            % (0.41) [-] Von Kármán constant
