@@ -113,7 +113,7 @@ max_iter                = 1000                            % (1000) [-] Maximum n
 max_bedlevel_change     = 999                             % (999) [m] Maximum bedlevel change after one timestep. Next timestep dt will be modified (use 999. if not used)
 
 %% -------------------- [Boundary conditions] ---------------- %%
-boundary_onshore        = constant                        % (gradient) [-] Name of onshore boundary conditions (flux, constant, uniform, gradient)
+boundary_onshore        = gradient                        % (gradient) [-] Name of onshore boundary conditions (flux, constant, uniform, gradient)
 boundary_lateral        = circular                        % (circular) [-] Name of lateral boundary conditions (circular, constant ==noflux)
 boundary_offshore       = constant                        % (constant) [-] Name of offshore boundary conditions (flux, constant, uniform, gradient)
 offshore_flux           = 0.                              % (0.) [-] Factor to determine offshore boundary flux as a function of Q0 (= 1 for saturated flux , = 0 for noflux)
