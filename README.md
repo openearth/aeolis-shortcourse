@@ -1,9 +1,9 @@
 ![AeoLiS Banner](https://github.com/openearth/aeolis-shortcourse/blob/main/Sandmotor/notebooks/logo.png)
 
 Hello, and welcome to the AeoLiS Short Course developed for Coastal Sediments '23! This short course will walk you through various 1D 
-and 2D AeoLiS cases to introduce you to the model.AeoLiS is a process-based aeolian sediment transport model that simulates variaitons 
+and 2D AeoLiS cases to introduce you to the model. AeoLiS is a process-based aeolian sediment transport model that simulates variations 
 in sediment supply using multiple bed surface properties. The inclusion of bed surface properties such as sediment sorting and armoring, 
-soil moisture content, and bed-slope effects make AeoLiS well suited for coastal environments where these conditions are oftern present. 
+soil moisture content, and bed-slope effects make AeoLiS well suited for coastal environments where these conditions are often present. 
 The use of AeoLiS in coastal environments allows for the modeling of berm feature changes due to the forcing factors of aeolian sediment 
 transport and waves (in combination with tide). 
 
