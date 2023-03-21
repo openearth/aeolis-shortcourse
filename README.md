@@ -15,7 +15,7 @@ transport and waves (in combination with tide).
 
 The short course is organized such that there are two main folders, Sandmotor (2D cases) and **inset second folder name** (1D cases),
 where within each folder are additional folders containing all required model input data and documentation for each case. Each of the 
-different scenarios included in this short course introduce the includsion of different physical processes effecting aeolian sediment
+different scenarios included in this short course introduce the inclusion of different physical processes affecting aeolian sediment
 transport. Each of the 2D and 1D scenarios included in the short course are outlined below.
 
 #### Sandmotor (2D)   
