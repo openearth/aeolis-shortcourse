@@ -53,7 +53,7 @@ def plot_topo_fence(ncfile, change=False, figsize=(10,5),time_index_start=0, tim
             plt.title(['Initial and final profiles'])
             ax.set_xlabel('Cross-shore distance [m]')
             ax.set_ylabel('Elevation rel MSL [m]')
-            plt.axvline(x=sand_fence_loc,color='g',linestyle='dashed')
+            plt.axvline(x=sand_fence_loc,color='g',linestyle='dashed', label = 'Fence')
             ax.legend()
 
 
@@ -113,7 +113,7 @@ def plot_topo_veg(ncfile, change=False, figsize=(10,5),time_index_start=0, time_
             plt.title(['Initial and final profiles'])
             ax.set_xlabel('Cross-shore distance [m]')
             ax.set_ylabel('Elevation rel MSL [m]')
-            plt.axvline(x=veg_start,color='g',linestyle='dashed')
+            plt.axvline(x=veg_start,color='g',linestyle='dashed', label = 'Vegetation boundary')
             plt.axvline(x=veg_end,color='g',linestyle='dashed')
             ax.legend()
 
