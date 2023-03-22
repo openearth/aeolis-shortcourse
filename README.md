@@ -63,3 +63,13 @@ To simplify the process of installing the dependencies needed for this short cou
    conda activate aeolis_env
    ```
    when this step is complete you should see (aeolis_env) on the far left of your terminal command line before your current path.
+   
+6. You can now run AeoLiS from the command line by running 
+   ```sh
+   aeolis [configfile]
+   ```
+   and open the jupyter notebook application by running
+   ```sh
+   jupyter notebook
+   ```
+7. Happy modelling!!
