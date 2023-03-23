@@ -11,16 +11,16 @@ restart                  = None                                  % [s] Interval 
 refdate                  = 2011-08-03                            % [-] Reference datetime in netCDF output
 
 %% -------------------- [Grid files *.grd] ------------------- %%
-xgrid_file               = ../data/bathy/x.txt         % Filename of ASCII file with x-coordinates of grid cells
-ygrid_file               = ../data/bathy/y.txt         % Filename of ASCII file with y-coordinates of grid cells
-bed_file                 = ../data/bathy/z_20110803.txt % Filename of ASCII file with bed level heights of grid cells
+xgrid_file               = ../data/grids/x.grd         % Filename of ASCII file with x-coordinates of grid cells
+ygrid_file               = ../data/grids/y.grd         % Filename of ASCII file with y-coordinates of grid cells
+bed_file                 = ../data/grids/z_20110803.grd % Filename of ASCII file with bed level heights of grid cells
 ne_file                  = None                                  % Filename of ASCII file with non-erodible layer
 veg_file                 = None                                  % Filename of ASCII file with initial vegetation density
 threshold_file           = None                                  % Filename of ASCII file with shear velocity threshold
 fence_file               = None                                  % Filename of ASCII file with sand fence location/height (above the bed)
 wave_mask                = None                                  % Filename of ASCII file with mask for wave height
 tide_mask                = None                                  % Filename of ASCII file with mask for tidal elevation
-threshold_mask           = ../data/bathy/threshold.txt % Filename of ASCII file with mask for the shear velocity thresholdmask_file                = ../data/bathy/mask_20110803.txt % Filename of ASCII file with mask for the shear velocity threshold
+threshold_mask           = ../data/grids/threshold.grd % Filename of ASCII file with mask for the shear velocity thresholdmask_file                = ../data/bathy/mask_20110803.txt % Filename of ASCII file with mask for the shear velocity threshold
 
 %% -------------------- [Time series *.txt] ------------------ %%
 tide_file                = ../data/bc/tide_none.txt           % Filename of ASCII file with time series of water levels

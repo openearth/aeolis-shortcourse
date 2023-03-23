@@ -13,7 +13,7 @@ transport and waves (in combination with tide).
 
 ## AeoLiS Short Course Organization
 
-The short course is organized such that there are two main folders, Sandmotor (2D cases) and **inset second folder name** (1D cases),
+The short course is organized such that there are two main folders, Sandmotor (2D cases) and Dune In Front of Dike - DIFD (1D cases),
 where within each folder are additional folders containing all required model input data and documentation for each case. Each of the 
 different scenarios included in this short course introduce the inclusion of different physical processes affecting aeolian sediment
 transport. Each of the 2D and 1D scenarios included in the short course are outlined below.
@@ -24,7 +24,7 @@ transport. Each of the 2D and 1D scenarios included in the short course are outl
    3. Grain Size Case with Inclusion of Tides 
    4. Grain Size Case with Inclusion of Tides & Waves 
   
-#### Insert Folder Name Here (1D)
+#### Dune In Front of Dike - DIFD (1D)
    1. Base Case 
    2. Inclusion of Surface Moisture
    3. Inclusion of Sand Fences
@@ -37,7 +37,7 @@ Prior to starting the short course follow the steps below in **Getting Started**
 #### Prerequisites
 
 Before starting the short course, please make sure you have Python installed on your computer and access to a terminal window (terminal or Anaconda Prompt). 
-It is recommended to have Anaconda installed prior to starting the short course as this program includes all of the necessary programs to install AeoLiS and complete the short course. 
+It is recommended to have Anaconda installed (https://docs.anaconda.com/anaconda/install/) prior to starting the short course as this program includes all of the necessary programs to install AeoLiS and complete the short course. 
 
 To simplify the process of installing the dependencies needed for this short course, we have prepared a conda environment file. 
 
