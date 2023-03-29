@@ -38,7 +38,6 @@ Prior to starting the short course follow the steps below in **Getting Started**
 
 Before starting the short course, please make sure you have Python installed on your computer and access to a terminal window (terminal or Anaconda Prompt). 
 It is recommended to have Anaconda installed (https://docs.anaconda.com/anaconda/install/) prior to starting the short course as this program includes all of the necessary programs to install AeoLiS and complete the short course. 
-
 To simplify the process of installing the dependencies needed for this short course, we have prepared a conda environment file. 
 
 #### Installing AeoLiS
