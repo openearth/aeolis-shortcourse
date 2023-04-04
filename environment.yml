@@ -7,4 +7,4 @@ dependencies:
     - jupyter
     - ffmpeg
     - pip:
-        - aeolis
+        - aeolis==2.1.1
