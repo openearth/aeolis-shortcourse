@@ -1,0 +1,54 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title:  Aeolis Short Course 2023
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: course
+contact:
+  - affiliation: AeoLis Development Team
+    email: Sierd.deVries@tudelft.nl
+    family-names: Sierd
+    given-names: de Vries
+authors:
+  - given-names: Sierd
+    name-particle: de
+    family-names: Vries
+    affiliation: Delft University of Technology
+    email: Sierd.deVries@tudelft.nl
+    orcid: 'https://orcid.org/0000-0001-5865-3715'
+  - given-names: Caroline
+    family-names: Hallin
+    email: e.c.hallin@tudelft.nl
+    affiliation: Lund University (Division of Water Resources Engineering)
+    orcid: 'https://orcid.org/0000-0001-9921-5754'
+  - given-names: Christa
+    name-particle: van
+    family-names: IJzendoorn
+    email: C.O.vanIJzendoorn@tudelft.nl
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0001-9756-1856'
+  - given-names: Bart
+    name-particle: van
+    family-names: Westen
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0001-7903-6062'
+  - given-names: Nicholas
+    family-names: Cohn
+    email: nick.cohn@usace.army.mil
+    affiliation: US Army Engineer Research and Development Center
+    orcid: 'https://orcid.org/0000-0003-4287-039X'
+  - given-names: Glen
+    family-names: Strypsteen
+    email: glenn.strypsteen@kuleuven.be
+    affiliation: Katholieke Universiteit Leuven
+    orcid: 'https://orcid.org/0000-0002-0078-7259'
+  - given-names: Janelle
+    family-names: Skaden
+    email: Janelle.E.Skaden@usace.army.mil
+    affiliation: US Army Engineer Research and Development Center
+    orcid: ''
+repository-code: 'https://github.com/openearth/aeolis-shortcourse'
+license: GPL-3.0
