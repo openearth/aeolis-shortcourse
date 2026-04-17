@@ -1,10 +1,11 @@
-name: aeolis_env
+name: aeolis_course_ICCE
 channels:
   - defaults
 dependencies:
-    - python=3.8
+    - python<3.14
+    - setuptools<80
     - pip
-    - jupyter
+    - notebook
     - ffmpeg
     - pip:
-        - aeolis==2.1.1
+        - aeolis==3.1.0rc1
