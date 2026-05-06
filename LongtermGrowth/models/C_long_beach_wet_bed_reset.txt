@@ -49,6 +49,7 @@ process_runup           = T                               % (F) [T/F] Enable the
 process_moist           = T                               % (F) [T/F] Enable the process of moist
 process_mixtoplayer     = F                               % (F) [T/F] Enable the process of mixing
 process_wet_supply	    = T                               % (F) [T/F] Enable the process of wet_supply (in callback function)
+process_wet_bed_reset   = T                               % (F) [T/Faeolis ] Enable the process of wet_bed_reset         
 process_meteo           = F                               % (F) [T/F] Enable the process of meteo
 process_avalanche       = T                               % (F) [T/F] Enable the process of avalanching
 process_separation      = F                               % (F) [T/F] Enable the including of separation bubble

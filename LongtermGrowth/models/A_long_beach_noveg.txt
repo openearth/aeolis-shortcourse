@@ -6,7 +6,7 @@
 %% -------------------- [Timing] ----------------------------- %%
 dt                      = 3600                            % (60) [s] Timeinterval between timesteps    
 tstart                  = 0                    	     	  % (0.)[s] Starting time of the simulation
-tstop                   = 607046400                       % (3600)[s] End time of the simulation - 812862000 two years: 94608000
+tstop                   = 607046400                       % (3600)[s] End time of the simulation - 812862000 two years: 63072000
 restart                 = None                            % (None) [s] Interval for which to write restart files
 refdate                 = 1997-09-17                      % ('2020-01-01 00:00')[-] Reference datetime in netCDF output
 callback		        = callback.py:update

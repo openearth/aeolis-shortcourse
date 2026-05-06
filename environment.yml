@@ -7,5 +7,7 @@ dependencies:
     - pip
     - notebook
     - ffmpeg
+    - hdf5
+    - netcdf4
     - pip:
         - aeolis==3.1.0rc1
