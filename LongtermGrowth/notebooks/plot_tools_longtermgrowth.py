@@ -146,16 +146,18 @@ def plot_dune_growth(fname, dune_toe_elevation=4.4):
                 x0, x1 = x[j - 1], x[j]
                 z0, z1 = profile[j - 1], profile[j]
                 if z1 != z0:
-                    toe_x[i] = x0 + (dune_toe_elevation - z0) * (x1 - x0) / (z1 - z0)
+                    try:
+                        toe_x[i] = x0 + (dune_toe_elevation - z0) * (x1 - x0) / (z1 - z0)
+                    except:
+                        toe_x[i] = np.nan
                 else:
                     toe_x[i] = x1
 
     years = [(d - dates[0]).days / 365.25 for d in dates]
-    fig, ax = plt.subplots(figsize=(8, 5))
-    ax.plot(years, toe_x, color='steelblue', linewidth=2)
-    ax.invert_yaxis()
-    ax.set_xlabel('Time (years)', fontsize=13, fontweight='bold')
-    ax.set_ylabel('Dune Toe Cross-shore Location (m)', fontsize=13, fontweight='bold')
+    fig, ax = plt.subplots(figsize=(5, 6))
+    ax.plot(toe_x, years, color='steelblue', linewidth=2)
+    ax.set_ylabel('Time (years)', fontsize=13, fontweight='bold')
+    ax.set_xlabel('Dune Toe \nCross-shore Location (m)', fontsize=13, fontweight='bold')
     ax.grid()
     plt.tight_layout()
     return fig, ax
@@ -173,15 +175,33 @@ def plot_vegetation_evolution(fname):
     if rhoveg_all is None:
         print(f'No vegetation output found in {os.path.basename(fname)}')
         return None, None
-    colors_arr = plt.cm.viridis(np.linspace(0, 1, len(time)))
+    veg_x = np.full(len(dates), np.nan)
+    for i in range(len(dates)):
+        veg = rhoveg_all[i, :]
+        target = 0.2
+        ix = np.where(veg >= target)[0]
+        if ix.size > 0:
+            j = ix[0]
+            if j == 0:
+                veg_x[i] = x[0]
+            else:
+                x0, x1 = x[j - 1], x[j]
+                z0, z1 = veg[j - 1], veg[j]
+                if z1 != z0:
+                    veg_x[i] = x0 + (target - z0) * (x1 - x0) / (z1 - z0)
+                else:
+                    veg_x[i] = x1
 
-    fig, ax = plt.subplots(figsize=(8, 5))
-    for i in range(len(time)):
-        ax.plot(x, rhoveg_all[i, :], color=colors_arr[i])
-    ax.set_ylabel('Vegetation Density (-)', fontsize=13, fontweight='bold')
-    ax.set_xlabel('Cross-shore Distance (m)', fontsize=13, fontweight='bold')
-    ax.set_ylim([0, 1])
+    # colors_arr = plt.cm.viridis(np.linspace(0, 1, len(time)))
+    years = [(d - dates[0]).days / 365.25 for d in dates]
+
+    fig, ax = plt.subplots(figsize=(5, 6))
+    # for i in range(len(time)):
+    ax.plot(veg_x, years) #, color=colors_arr[i])
+    ax.set_ylabel('Time', fontsize=13, fontweight='bold')
+    ax.set_xlabel('First Cross-Shore \n Location of Established Vegetation (m)', fontsize=13, fontweight='bold')
+    # ax.set_ylim([0, 1])
     ax.grid()
-    _add_colorbar(fig, ax, dates)
+    # _add_colorbar(fig, ax, dates)
     plt.tight_layout()
     return fig, ax

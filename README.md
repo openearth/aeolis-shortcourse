@@ -54,7 +54,7 @@ To simplify the process of installing the dependencies needed for this short cou
 2. Download the aeolis short course repository on your computer by going to the URL https://github.com/openearth/aeolis-shortcourse and clicking on the button `Code` -> `Download zip`
 3. Unzip the downloaded zip file on your computer at the location of your choice and navigate to the extracted directory in the terminal.
     ```sh
-    cd aeolis-shortcourse
+    cd aeolis-shortcourse-ICCE
     ```
 4. Create a new conda environment by typing the following into your terminal window
    ```sh

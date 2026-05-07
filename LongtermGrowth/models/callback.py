@@ -51,21 +51,6 @@ def veg_mortality_fix(zb, TWL, self):
 
 def wet_supply(x_0, zb, beach_slope, shoreline_change_rate, dune_toe_elevation, self):
 
-    ''' Increase elevation of beach topography.
-
-    Parameters
-    ----------
-    s : dict
-        Spatial grids
-    p : dict
-        Model configuration parameters
-
-    Returns
-    -------
-    dict
-        Spatial grids
-
-    '''
     process_wet_supply = self.p['process_wet_supply']
     method_wet_supply = self.p['method_wet_supply']
     zshoreline = self.p['zshoreline']

@@ -48,7 +48,7 @@ process_wave            = T                               % (F) [T/F] Enable the
 process_runup           = T                               % (F) [T/F] Enable the process of wave runup
 process_moist           = T                               % (F) [T/F] Enable the process of moist
 process_mixtoplayer     = F                               % (F) [T/F] Enable the process of mixing
-process_wet_supply	    = T                               % (F) [T/F] Enable the process of wet_supply (in callback function)
+process_wet_supply	    = F                               % (F) [T/F] Enable the process of wet_supply (in callback function)
 process_wet_bed_reset   = T                               % (F) [T/Faeolis ] Enable the process of wet_bed_reset         
 process_meteo           = F                               % (F) [T/F] Enable the process of meteo
 process_avalanche       = T                               % (F) [T/F] Enable the process of avalanching
@@ -195,6 +195,6 @@ dune_toe_elevation      = 4.398				              % From  data analysis
 Cs 			            = 0.0011 			              % Cs is a nondimensional calibration coefficient dependent on grain size and wave height, used in dune erosion module Palmsten and Holman (2011) equation
 
 %%---------------------[Sediment supply] ------------------------%%
-method_wet_supply	    = wet_bed_reset                   % Method of process_wet_supply (wet_bed_reset, vertical_beach_growth, constant_SCR_variable_tanB, constant_SCR_constant_tanB)
+method_wet_supply	    = wet_bed_reset                   % Method of process_wet_supply (vertical_beach_growth, constant_SCR_variable_tanB, constant_SCR_constant_tanB)
 zshoreline              = 0                               % [m] Elevation where process_sed_supply is implemented                           
 shoreline_change_rate	= 2.87			  	              % [m/yr] Elevation added to beach during process sed supply (shoreline change rate)
