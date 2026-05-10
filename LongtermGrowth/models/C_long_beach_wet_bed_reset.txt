@@ -34,7 +34,7 @@ meteo_file              = None            		        % (None) Filename of ASCII f
 %% -------------------- [Output] ----------------------------- %%    
 output_times            = 172800                          % (60)[s] Timeinterval [s] between *.nc output file
 output_file             = None                            % (None)[-] Name of the *.nc output file
-output_vars             = zb TWL uw uth rhoveg            % ('zb', 'zs','Ct', 'Cu','uw', 'udir','uth', 'mass','', 'w') [-] List of output variables for in *.nc output file
+output_vars             = zb TWL uw udir uth rhoveg            % ('zb', 'zs','Ct', 'Cu','uw', 'udir','uth', 'mass','', 'w') [-] List of output variables for in *.nc output file
 visualization           = F                               % (F) [T/F] Enable the generation of figures visualizing model initialization
 
 %% -------------------- [Flags Processes] -------------------- %%

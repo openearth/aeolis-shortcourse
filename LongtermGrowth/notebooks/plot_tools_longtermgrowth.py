@@ -121,6 +121,97 @@ def plot_bed_change(fname):
     return fig, ax
 
 
+def _circular_mean_deg(angles_deg, axis=0):
+    """Compute the circular mean of angles in degrees."""
+    radians = np.deg2rad(angles_deg)
+    sin_mean = np.nanmean(np.sin(radians), axis=axis)
+    cos_mean = np.nanmean(np.cos(radians), axis=axis)
+    mean_rad = np.arctan2(sin_mean, cos_mean)
+    return np.mod(np.rad2deg(mean_rad), 360)
+
+
+def plot_windrose_and_timeseries(fname):
+    """Plot a windrose and wind speed/direction timeseries from AeoLiS output.
+
+    Parameters
+    ----------
+    fname : str
+        Path to netCDF output file
+    """
+    _, _, _, _, _, _, dates = extract_netcdf(fname)
+
+    ds = nc.Dataset(fname, 'r')
+    if 'uw' not in ds.variables:
+        print(f'No wind speed variable "uw" found in {os.path.basename(fname)}')
+        ds.close()
+        return None, None
+
+    if 'udir' not in ds.variables:
+        print(f'No wind direction variable "udir" found in {os.path.basename(fname)}')
+        ds.close()
+        return None, None
+
+    uw = ds['uw'][:]
+    ud = ds['udir'][:]
+    ds.close()
+
+    if uw.ndim > 1:
+        uw_flat = uw.reshape(uw.shape[0], -1)
+    else:
+        uw_flat = uw
+    if ud.ndim > 1:
+        ud_flat = ud.reshape(ud.shape[0], -1)
+    else:
+        ud_flat = ud
+
+    mean_speed = np.nanmean(uw_flat, axis=1)
+    mean_direction = _circular_mean_deg(ud_flat, axis=1)
+
+    theta = np.deg2rad(ud_flat.flatten())
+    speed_weights = uw_flat.flatten()
+    valid = ~np.isnan(theta) & ~np.isnan(speed_weights)
+    theta = theta[valid]
+    speed_weights = speed_weights[valid]
+
+    if theta.size == 0:
+        print(f'No valid wind data found in {os.path.basename(fname)}')
+        return None, None
+
+    bins = np.linspace(0, 2 * np.pi, 17)
+    counts, _ = np.histogram(theta, bins=bins, weights=speed_weights)
+    widths = np.diff(bins)
+    centers = bins[:-1] + 0.5 * widths
+
+    fig = plt.figure(figsize=(14, 5))
+    ax0 = fig.add_subplot(1, 2, 1, projection='polar')
+    ax0.bar(centers, counts, width=widths, bottom=0.0, align='center', edgecolor='k', alpha=0.7)
+    ax0.set_theta_zero_location('N')
+    ax0.set_theta_direction(-1)
+    ax0.set_xticks(np.deg2rad(np.arange(0, 360, 45)))
+    ax0.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'])
+    ax0.set_title('Windrose', fontsize=13, fontweight='bold')
+
+    ax1 = fig.add_subplot(1, 2, 2)
+    ax1.plot(dates, mean_speed, color='steelblue', linewidth=2, label='Mean Speed (m/s)')
+    ax1.set_xlabel('Date', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Mean Speed (m/s)', color='steelblue', fontsize=12, fontweight='bold')
+    ax1.tick_params(axis='y', labelcolor='steelblue')
+    ax1.grid(True)
+
+    ax2 = ax1.twinx()
+    ax2.plot(dates, mean_direction, color='darkorange', linewidth=2, label='Mean Direction (deg)')
+    ax2.set_ylabel('Mean Direction (deg)', color='darkorange', fontsize=12, fontweight='bold')
+    ax2.tick_params(axis='y', labelcolor='darkorange')
+
+    lines, labels = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines + lines2, labels + labels2, loc='upper left')
+
+    fig.autofmt_xdate()
+    plt.tight_layout()
+    return fig, (ax0, ax1)
+
+
 def plot_dune_growth(fname, dune_toe_elevation=4.4):
     """Plot the cross-shore location of the dune toe elevation over time.
 
